@@ -1,0 +1,178 @@
+body {
+    width: 100%;
+    background-color: lightgoldenrodyellow;
+    color: rgb(0,0,0,1);
+}
+
+p, legend {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+legend {
+    font-size: 18px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    border-bottom: 1px rgba(0,0,0,.5) solid;
+}
+
+p, textarea{
+	text-align: justify;
+	text-indent: 50px;
+}
+
+a {
+	color: #606060;
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+
+img {
+    margin-left: 50px;
+}
+/* header#header img#icone{
+	position: absolute;
+	left: 955px;
+	top: 70px;
+} */
+header#header{
+	border-bottom: 1px #606060 solid;
+	height: 100px;
+	background: url("../img/ShopsAnnieLogo.png") no-repeat 0 -20px;
+}
+header#header h1{
+	font-family: 'FontLogo', sans-serif;
+	font-size: 28pt;
+	color: rgb(66, 16, 16);
+    padding: 20px 0 0 0;
+    margin-bottom: 0px;
+    margin-left: 160px;
+}
+header#header h2{
+	font-family: 'Titillium Web', sans-serif;
+	font-size: 16pt;
+	color: rgba(66, 16, 16, 0.6);
+	padding: 0;
+    margin-top: 0px;
+    margin-left: 160px;
+}
+
+/* Navbar */
+nav#menu{
+    display: block;
+}
+nav#menu ul{
+	list-style: none;
+	text-transform: uppercase;
+    position: absolute;
+    float: right;
+	top: -20px;
+	left: 55%;
+}
+nav#menu li{
+    display: inline-block;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    width: 120px;
+    height: 25px;
+    font-size: 16px;
+    padding: 15px 12px 10px 12px;
+	background-color: rgba(189, 22, 22, 0.5);
+	margin: 2px;
+	transition: background-color 1s;
+}
+nav#menu li:hover{
+	background-color: rgb(172, 0, 0);
+	text-decoration: underline;
+
+}
+nav#menu h1{
+	display: none;
+}
+nav#menu a{
+	color: rgb(66, 16, 16);
+	text-decoration: none;
+}
+nav#menu a:hover{
+	color: #ffffff;
+}
+
+/* Form */
+
+form {
+	margin: 50px auto 0 auto;
+    background-color: rgba(245, 222, 179, 0.9);
+    padding: 50px;
+    width: 900px;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0,0,0,.5);
+
+}
+
+input, textarea, select {
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	font-weight: normal;
+	font-size: 15px;
+    background-color: rgba(255, 255, 255, .8);
+}
+
+textarea {
+    box-shadow: 0 0 10px rgba(0,0,0,.5);
+}
+
+input, select {
+    height: 23px;
+}
+input:hover, textarea:hover {
+	background-color: #dddddd;
+}
+
+div.ui-helper-hidden-accessible {
+    display: none;
+}
+
+.ui-menu-item, .ui-menu-item-wrapper {
+    font-weight: 900;
+    display: block;
+    white-space: pre;
+    min-height: 1.2em;
+    height: 30px;
+    padding-left: 10px;
+    margin-left: -24px;
+    background: #fff;
+    width: 175px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 12px;
+    font-stretch: extra-expanded;
+
+    color: rgba(0, 0, 0, 0.7);
+}
+
+input#idSubmit {
+    margin: 50px auto 20px 45%;
+    outline: none;
+    text-align: center;
+    width: 120px;
+    height: 45px;
+    border-radius: 5px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(66, 16, 16);
+    font-size: 18px;
+    background-color: rgba(189, 22, 22, 0.7);
+}
+
+#idSubmit:hover {
+    color: white;
+    background-color: rgb(66, 16, 16);
+
+}
+footer#rodape{
+	clear: both;
+    border-top: 1px solid #606060;
+    margin-top: 50px;
+}
+footer#rodape p{
+	text-align: center;
+}
+
+

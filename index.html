@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="./css/style.css"/>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="./js/jquery.js"></script>
+    <script src="./js/script.js"></script>
+    <title>Form</title>
+</head>
+<body>
+    <header id="header">
+        <h1>Contact Us</h1>
+        <h2>Message and order</h2>
+        <!-- <h3 id="idAlert"></h3> -->
+
+        <!-- <img src="#" id="icone" alt="" title="Logo" /> -->
+        <nav id="menu">
+            <h1>Menu</h1>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <form class="form" name="myform" method="POST" id="idContactForm" action="https://formspree.io/mbjopqab" oninput="calc_total();">
+        <div class="ui-widget">
+            <legend>User</legend>
+            <p>
+                <label for="name">
+                First name: <input type="text" id="name" name="name" required>
+                </label>
+            <label for="lName">
+            Last name: <input type="text" id="lName" name="lName" required>
+            </label>
+            </p>
+            <p>
+            <label for="email">
+                <!-- oninvalid="alert('You must fill out the form!');" -->
+            E-mail: <input type="email" id="email" size="20" maxlength="40" placeholder="E-mail" name="_replyto" required>
+            </label>
+            </p>
+        </div>
+        <div class="address">
+            <legend>User Address</legend>
+            <p>
+                <label for="idNum">Number:</label>
+                <input type="text" name="numberAd" id="idNum" size="12" maxlength="20" placeholder="Address number" required/>
+            </p>
+            <p>
+                <label for="idStAdress">Street:</label>
+                <input type="text" name="street" id="idStAdress" size="30" maxlength="80" placeholder="St, Ave, Blvd..." required/>
+            </p>
+            <p>
+                <label for="idCity">City:</label>
+                <input type="text" name="city" id="idCity" maxlength="25" size="15" placeholder="City"
+                list="cities" required/>
+                <datalist id="cities">
+                    <option value="Vancouver"></option>
+                    <option value="Toronto"></option>
+                    <option value="Québec"></option>
+                    <option value="Ottawa"></option>
+                    <option value="Charlottetown"></option>
+                    <option value="Edmonton"></option>
+                    <option value="Fredericton"></option>
+                    <option value="Halifax"></option>
+                    <option value="Iqaluit"></option>
+                    <option value="Regina"></option>
+                    <option value="St. John's"></option>
+                    <option value="Victoria"></option>
+                    <option value="Whitehorse"></option>
+                    <option value="Winnipeg"></option>
+                    <option value="YellowKnife"></option>
+                </datalist>
+            </p>
+            <p>
+                <label for="idProv">Province:</label>
+                <select name="province" id="idProv" required>
+
+                        <option value="AB">Alberta</option>
+                        <option value="BC" selected="selected">British Columbia</option>
+                        <option value="MB">Manitoba</option>
+                        <option value="NB">New Brunswick</option>
+                        <option value="NL">Newfoundland and Labrador</option>
+                        <option value="NS">Nova Scotia</option>
+                        <option value="ON">Ontario</option>
+                        <option value="PE">Prince Edward Island</option>
+                        <option value="QC">Quebec</option>
+                        <option value="SK">Saskatchewan</option>
+                        <option value="NT">Northwest</option>
+                        <option value="NU">Nunavut</option>
+                        <option value="YT">Yukon</option>
+                </select>
+            </p>
+        </div>
+        <div>
+            <p>
+                <label for="idPassword">Password: </label>
+                <input type="password" name="password" id="idPassword" size="6" minlength="8" maxlength="8" placeholder="8digits" pattern=".{8,}" required/>
+            </p>
+        </div>
+        <div>
+            <legend>Message:</legend>
+                <label for="message">
+                <p>
+                <textarea name="message" rows="8" cols="85" value=" " id="message" placeholder="Leave your message here"></textarea>
+                </p>
+            </label>
+        </div>
+        <fieldset id="order">
+            <legend>About Product</legend>
+            <p>
+                <input type="checkbox" name="tOrd" id="cOrd" checked="checked" />
+                <label for="cOrd">I would like to get this product when available.</label>
+            </p>
+            <p>Description Product:</p>
+            <p>TUMI - Voyageur Carson Laptop Backpack - 15 Inch Computer Bag for Women</p>
+            <img type="image" src="./img/backpack.jpg" style="width: 100px">
+            <p>
+                <label for="idColor">Color:</label>
+                <input type="color" name="tColor" id="idColor" value="#43182f" />
+            </p>
+            <p>
+                <label>Quantity:</label>
+                <input type="number" name="tQty" id="idQty" min="0" max="5"/>
+            </p>
+            <p>
+                <label>Total Price: $</label>
+                <input type="text" name="TotalPrice" id="idTotalPrice" placeholder="Total Payment" readonly="readonly" />
+        </p>
+       </fieldset>
+
+        <input type="submit" name="submit" value="Submit" id="idSubmit"></input>
+
+         <!-- <h3 id="idAlert"></h3> -->
+    </form>
+   
+    <footer id="rodape">
+        <p>&copy; Copyright 2020 - by Elen Ferreira <br />
+        <a href="#">Facebook</a> | <a href="#">Linkedin</a> | <a href="#">Instagram</a></p>
+    </footer>
+
+<script>
+    // var a = window.document.querySelector('textarea#message')
+    // a.style.background = 'lightblue'
+    
+    // document.getElementById("idPassword").addEventListener("invalid", myFunction);
+    // function myFunction() {
+    //     alert("Must contain 8 characters");
+    // }
+
+</script>
+
+</body>
+</html>
